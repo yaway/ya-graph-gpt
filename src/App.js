@@ -149,10 +149,12 @@ function App() {
           })
           .then((response) => {
             const { choices } = response;
+            console.log(response)
             const text = choices[0].text;
             console.log(text);
 
             const updates = JSON.parse(text);
+            console.log("openai output");
             console.log(updates);
 
             updateGraph(updates);
